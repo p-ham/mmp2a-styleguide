@@ -1,0 +1,37 @@
+$primary-color:  #0CB0D6;
+$background-color: #ECF0F1;
+$accent-color: #E74C3C;
+$font-color: #333;
+$font-color--inverse: $background-color;
+
+*, ul {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+}
+.node {
+
+}
+
+.flex-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.color {
+    color: $font-color--inverse;
+    font-weight: bold;
+    width: 200px;
+    height: 200px;
+    padding: 1em;
+}
+#primary-color {
+    background-color: $primary-color;
+}
+#background-color {
+    background-color: $background-color;
+    color: $font-color;
+}
+#accent-color {
+    background-color: $accent-color;
+}
+#font-color {
+    background-color: $font-color;
+}

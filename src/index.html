@@ -7,21 +7,134 @@
         <link rel="stylesheet" href="styles/monokai-sublime.css">
         <script src="highlight.pack.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
-        <link href="css/style.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
     </head>
     <body>
-        <nav>
-            
-        </nav>
-        <section class="content">
-            <h1>Test</h1>
-            <pre><code class="html">
-&lt;body&gt;
-    &lt;h1&gt;Test&lt;/h1&gt;
-&lt;/body&gt;  
-            </code></pre>
-        </section>
-        
-        
+        <div class="sidebar">
+            <img src="img/icon.jpg">
+            <h4>Styleguide</h4>
+            <nav>
+                <ul>
+                    <li><a href="#brand-guide">Brand Guide </a>
+                        <ul>
+                            <li><a href="#introduction">Introduction</a></li>
+                            <li><a href="#colors">Colors</a></li>
+                            <li><a href="#typography">Typography</a></li>
+                            <li><a href="#logo">Logo</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#css-methodology">CSS-Methodology</a>
+                        <ul>
+                            <li><a href="#indentation">Indentation</a></li>
+                            <li><a href="#units">Units</a></li>
+                            <li><a href="#file-structure">File Structure</a></li>
+                            <li><a href="#pre-processor">Pre-Processor</a></li>
+                            <li><a href="#class-naming-conventions">Class Naming Conventions</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#component-library">Component Library</a>
+                        <ul>
+                            <li><a href="#headings">Headings</a></li>
+                            <li><a href="#lists">Lists</a></li>
+                            <li><a href="#links">Links</a></li>
+                            <li><a href="#buttons">Buttons</a></li>
+                            <li><a href="#form-elements">Form Elements</a></li>
+                            <li><a href="#media-blocks">Media Blocks</a></li>
+                            <li><a href="#navigation">Navigation</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <main class="content">
+            <section id="brand-guide">
+                <h1>Brand Guide</h1>
+                <section class="node" id="introduction">
+                    <h2>Introduction</h2>
+                </section>
+                <section class="node" id="colors">
+                    <h2>Colors</h2>
+                    <p>The primary brand colors are used to represent Dabilu Sports in public and must reflect the Dabilu Sports brand. These colors are part of our corporate identity.</p>
+                    <div class="node__element">
+                        <h3>Primary Colors</h3>
+                        <p>asdfasdfasfdasfd</p>
+                        <div class="flex-wrapper">
+                            <div class="color" id="primary-color">
+                                <p>$primary-color</p>
+                                <p>#0CB0D6</p>
+                            </div>
+                            <div class="color" id="background-color">
+                                <p>$background-color</p>
+                                <p>$font-color--inverse</p>
+                                <p>#ECF0F1</p>
+                            </div>
+                            <div class="color" id="accent-color">
+                                <p>$accent-color</p>
+                                <p>#E74C3C</p>
+                            </div>
+                            <div class="color" id="font-color">
+                                <p>$font-color</p>
+                                <p>#333</p>
+                            </div>
+                        </div>
+                        <pre>
+                            <code class="css">
+.class {
+    background-color: $primary-color;
+}
+                            </code>
+                        </pre>
+                    </div>
+                </section>
+                <section class="node" id="typography">
+                    <h2>Typography</h2>
+                </section>
+                <section class="node" id="logo">
+                    <h2>Logo</h2>
+                </section>
+            </section>
+            <section id="css-methodology">
+                <h1>CSS-Methodology</h1>
+                <section class="node" id="indentation">
+                    <h2>Indentation</h2>
+                </section>
+                <section class="node" id="units">
+                    <h2>Units</h2>
+                </section>
+                <section class="node" id="file-structure">
+                    <h2>File Structure</h2>
+                </section>
+                <section class="node" id="pre-processor">
+                    <h2>Pre-Processor</h2>
+                </section>
+                <section class="node" id="class-naming-conventions">
+                    <h2>Class Naming Conventions</h2>
+                </section>
+            </section>
+            <section id="component-library">
+                <h1>Component-library</h1>
+                <section class="node" id="headings">
+                    <h2>Headings</h2>
+                </section>
+                <section class="node" id="lists">
+                    <h2>Lists</h2>
+                </section>
+                <section class="node" id="links">
+                    <h2>Links</h2>
+                </section>
+                <section class="node" id="buttons">
+                    <h2>Buttons</h2>
+                </section>
+                <section class="node" id="form-elements">
+                    <h2>Form Elements</h2>
+                </section>
+                <section class="node" id="media-blocks">
+                    <h2>Media Blocks</h2>
+                </section>
+                <section class="node" id="navigation">
+                    <h2>Navigation</h2>
+                </section>
+            </section>
+        </main>
     </body>
 </html>

@@ -5,13 +5,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/monokai-sublime.css">
+        <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
         <script src="highlight.pack.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
         <div class="sidebar">
-            <img src="img/icon.jpg">
+            <img src="img/icon.png">
             <h4>Styleguide</h4>
             <nav>
                 <ul>
@@ -51,6 +52,7 @@
                 <h1>Brand Guide</h1>
                 <section class="node" id="introduction">
                     <h2>Introduction</h2>
+                    <p>Since Git-Visualizer is a tool that helps visualize GitHub and GitLab Repositories we felt the need to create a styleguide to help style this tool in a similar fashion to GitHub and GitLab. This styleguide aims to provide structure and orientation for people creating new components for the project. It is divided into three main parts: a Brand Guide, the CSS Methodologies to use and a Component Library.</p>
                 </section>
                 <section class="node" id="colors">
                     <h2>Colors</h2>
@@ -88,9 +90,81 @@
                 </section>
                 <section class="node" id="typography">
                     <h2>Typography</h2>
+                    <h3>Typefaces</h3>
+                    <p>Since both GitHub and GitLab use <b>Segoe UI</b> as their main font, we opted to use it as our main font too. To highlight headlines a bit more, we use <b>Passion One</b> as our font for headlines. We use Roboto as a fallback font in case the user doesn't have Segoe UI installed on their device. As a fallback for headlines we use any cursive font.</p>
+                    <section id="typeface" class="example">
+                        <div class="font flex-wrapper">
+                            <div>
+                                <h4>Segoe UI</h4>
+                                <p>Segoe UI is a member of the Segoe family used in Microsoft products for user interface text, as well as for some online user assistance material, intended to improve the consistency in how users see all text across all languages. It is distinguishable from its predecessor Tahoma and the OS X user interface font Lucida Grande by its rounder letters. Segoe UI was produced by Monotype Imaging.</p>
+                            </div>
+                            <div>   
+                                <h4>Oo</h4>
+                                <p>0 1 2 3 4 5 6 7 8 9</p>
+                                <p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+                                <p>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
+                            </div>
+                        </div>
+                        <div class="font flex-wrapper">
+                            <div>
+                                <h4>Passion One</h4>
+                                <p>Passion One is a set of 3 display fonts aimed to composing titles in big sizes. Its counterforms decrease as the passion increases! Please use them only for your most passionate thoughts and ideas.</p>
+                            </div>
+                            <div>
+                                <h4>Oo</h4>
+                                <p>0 1 2 3 4 5 6 7 8 9</p>
+                                <p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+                                <p>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
+                            </div>
+                        </div>
+                    </section>
+                    <h3>Font Sizes</h3>
+                    <p>16px is assumed to be the default font size. A scale of 1.333 (Perfect Fourth) is used for each of the four levels of headings. Small text is smaller than the default font size by the same factor.</p>
+                    <section id="font-size" class="example">
+                        <h1>This is a heading of the level h1 - 3.157em (50.15px)</h1>
+                        <h2>This is a heading of the level h2 - 2.369em (37.90px)</h2>
+                        <h3>This is a heading of the level h3 - 1.777em (28.43px)</h3>
+                        <h4>This is a heading of the level h4 - 1.333em (21.33px)</h4>
+                        <p>This is a paragraph p - 1em (16px)</p>
+                        <small>This is a small text - 0.75em (12px)</small>
+                        <pre>
+                            <code class="css">
+p {
+    font-size: 16px;
+}
+h4 {
+    font-size: 1.333em;
+}
+h3 {
+    font-size: 1.777em;
+}
+h2 {
+    font-size: 2.369em;
+}
+h1 {
+    font-size: 3.157em;
+}
+small {
+    font-size: 0.75em;
+}
+                            </code>
+                        </pre>
+                    </section>
                 </section>
                 <section class="node" id="logo">
                     <h2>Logo</h2>
+                    <div class="flex-wrapper">
+                        <img src="img/icon.png" alt="Git Visualizer Logo in Cyan">
+                        <div id="logo-background">
+                            <img src="img/icon-white.png" alt="Git Visualizer Logo in White">
+                        </div>
+                    </div>
+                    <h3>Background</h3>
+                    <p>The Git Visualizer Logo is based on the Git Logo. The only change made, is the addition of a bar chart at the top right edge and the inversion of the original orange color brought us to the shade of cyan you can see in the picture.</p>
+                    <h3>Color</h3>
+                    <p>The Logo is only to be used in the shade of cyan defined as the primary color in the <a href="#colors">Colors</a> Section of this styleguide. To be able to use the Logo on cyan backgrounds, we provided a white version of the logo. This version is only to be used on cyan backgrounds to keep the corporate identity intact.</p>
+                    <h3>Sizing</h3>
+                    <p>The aspect ratio of the Logo is no subject to change, so stretching the logo in width or height is not allowed. Both sides have to be scaled by the same factor. A minimum width of 32px is advised to be able to make out the outlines of the logo.</p>
                 </section>
             </section>
             <section id="css-methodology">

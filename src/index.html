@@ -80,7 +80,7 @@
                         <pre>
                             <code class="css">
 .class {
-    background-color: $primary-color;
+	background-color: $primary-color;
 }
                             </code>
                         </pre>
@@ -97,18 +97,273 @@
                 <h1>CSS-Methodology</h1>
                 <section class="node" id="indentation">
                     <h2>Indentation</h2>
+                    <p>Indent by 1 tab at a time. Don’t use spaces or mix tabs and spaces for indentation.</p>
+                    <pre>
+                        <code class="html">
+&lt;ul&gt;
+	&lt;li&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+                        </code>
+                    </pre>
+                    <pre>
+                        <code class="css">
+.selector {
+	attribute: value;
+}
+                        </code>
+                    </pre>
                 </section>
                 <section class="node" id="units">
                     <h2>Units</h2>
+                    <span>Prefer these units</span>
+                    <ul>
+                        <li>%</li>
+                        <li>em</li>
+                        <li>px</li>                        
+                    </ul>
+                    <span>Avoid these units</span>
+                    <ul>
+                        <li>in</li>
+                        <li>cm</li>
+                        <li>mm</li>                        
+                    </ul>
+                    <h3>Color</h3>
+                    <p>Don't use color keywords, instead use hexadecimal color codes.</p>
+                    <p>Don't use shorthand hexadecimal color codes.</p>
+                    <p>Do write hexadecimal color codes lowercase.</p>
+                    <span>Bad</span>
+                    <pre>
+                        <code class="css">
+color: red;
+color: #0f0;
+color: #0000FF;
+                        </code>
+                    </pre>
+                    <span>Good</span>
+                    <pre>
+                        <code class="css">
+color: #ff0000;
+color: #00ff00;
+color: #0000ff;
+                        </code>
+                    </pre>
+                    <h3>Border</h3>
+                    <p>Don't use <span>border: none;</span> or <span>border: zero;</span>. They are both valid options, <span>but border: 0;</span> is shorter.</p>
+                    <span>Bad</span>
+                    <pre>
+                        <code class="css">
+border-width: none;
+                        </code>
+                    </pre>
+                    or
+                    <pre>
+                        <code class="css">
+border-width: zero;
+                        </code>
+                    </pre>
+                    <span>Good</span>
+                    <pre>
+                        <code class="css">
+border-width: 0;
+                        </code>
+                    </pre>
+                    <h3>Shorthand Attributes</h3>
+                    <p>Do use shorthand attributes in cases like <span>margin</span>, <span>padding</span> or <span>border-width</span>.</p>
+                    <span>Bad</span>
+                    <pre>
+                        <code class="css">
+margin: 4px 4px 4px 4px;
+padding: 20px 10px 20px;
+                        </code>
+                    </pre>
+                    <span>Good</span>
+                    <pre>
+                        <code class="css">
+margin: 4px;
+padding: 20px 10px;
+                        </code>
+                    </pre>
+                    <p>But try to avoid shorthand attributes in cases like <span>border</span> or <span>flex</span>.</p>
+                    <span>Bad</span>
+                    <pre>
+                        <code class="css">
+border: 5px solid #ff0000;
+                        </code>
+                    </pre>
+                    <span>Good</span>
+                    <pre>
+                        <code class="css">
+border-width: 5px;
+border-style: solid;
+border-color: #ff0000;
+                        </code>
+                    </pre>
+                    <h3>Leading zero</h3>
+                    <p>Exclude unnecessary leading zeros.</p>
+                    <span>Bad</span>
+                    <pre>
+                        <code class="css">
+color: rgba(24, 12, 76, 0.4);                                
+                        </code>
+                    </pre>
+                    <span>Good</span>
+                    <pre>
+                        <code class="css">
+color: rgba(24, 12, 76, .4);
+                        </code>
+                    </pre>
+                    <h3>Unnecessary Significand</h3>
+                    <p>Don't add zeros to number values that are not fractions.</p>
+                    <span>Bad</span>
+                    <pre>
+                        <code class="css">
+transition-duration: 1.0s;                
+                        </code>
+                    </pre>
+                    <span>Good</span>
+                    <pre>
+                        <code class="css">
+transition-duration: 1s;
+                        </code>
+                    </pre>
+                    <h3>Space after commas</h3>
+                    <p>Commas in lists must be followed by a space.</p>
+                    <span>Bad</span>
+                    <pre>
+                        <code class="css">
+color: rgb(255,255,255);
+                        </code>
+                    </pre>
+                    <span>Good</span>
+                    <pre>
+                        <code class="css">
+color: rgb(255, 255, 255);
+                        </code>
+                    </pre>
+                    <h3>Zero Units</h3>
+                    <p>Don't use units on 0 values.</p>
+                    <span>Bad</span>
+                    <pre>
+                        <code class="css">
+margin: 0px;
+                        </code>
+                    </pre>
+                    <span>Good</span>
+                    <pre>
+                        <code class="css">
+margin: 0;
+                        </code>
+                    </pre>
                 </section>
                 <section class="node" id="file-structure">
                     <h2>File Structure</h2>
+                    <p>Every block acts as a partial and has its own SCSS file.</p>
+                    <p>Each partial contains the object defintition along with any of the associated elements and modifiers.</p>
+                    <pre>
+                        <code class="nohighlight">
+style/
+|-- style.scss
+|-- partials/
+    |-- navigations.scss
+    |-- buttons.scss
+    |-- forms.scss
+    |-- errors.scss
+    |-- ...
+                        </code>
+                    </pre>
                 </section>
                 <section class="node" id="pre-processor">
-                    <h2>Pre-Processor</h2>
+					<h2>Pre-Processor</h2>
+					<p>Use gulp.js as task runner.</p>
+					<h3>Plugins</h3>
+					<ul>
+						<li>gulp-sass</li>
+						<li>gulp-sourcemaps</li>						
+					</ul>
+					<p>gulp-sass is a very light-weight wrapper around node-sass, which in turn is a Node binding for libsass, which in turn is a port of Sass.</p>
+					<span>Basic Setup with Source Maps and BrowserSync</span>
+					<pre>
+						<code class="js">
+'use strict';
+
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
+
+gulp.task('sass', function () {
+	return gulp.src('./sass/**/*.scss')
+		.pipe(sourcemaps.init())
+		.pipe(sass().on('error', sass.logError))
+		.pipe(sourcemaps.write('./maps'))
+		.pipe(gulp.dest('./css'));
+});
+
+gulp.task('sass:watch', function () {
+	gulp.watch('./sass/**/*.scss', ['sass']);
+});
+						</code>
+					</pre>
                 </section>
                 <section class="node" id="class-naming-conventions">
-                    <h2>Class Naming Conventions</h2>
+					<h2>Class Naming Conventions</h2>
+					<h3>Kebab Case</h3>
+					<p>All words lowercase with <span>-</span> separating words.</p>
+                    <span>Example</span>
+                    <pre>
+                        <code class="css">
+.this-is-a-selector {
+
+}
+                        </code>
+                    </pre>
+					<h3>BEM</h3>
+					<p>B(lock)__E(element)_M(odifier)</p>
+					<p>Don't use CSS tag or ID selectors when using BEM.</p>
+					<h3>Block</h3>
+					<ul>
+						<li>A functionally independent page component that can be reused. In HTML, blocks are represented by the class attribute.</li>
+						<li>The block shouldn't influence its environment, meaning you shouldn't set the external geometry (margin) or positioning for the block.</li>
+						<li>Blocks can be nested in each other.</li>
+					</ul>
+					<span>Example</span>
+                    <pre>
+                        <code class="html">
+&lt;form class=&quot;search-form&quot;&gt;&lt;/form&gt;
+                        </code>
+                    </pre>
+					<h3>Element</h3>
+					<ul>
+						<li>A composite part of a block that can't be used separately from it.</li>
+						<li>The element name is separated from the block name with a double underscore (__).</li>
+						<li>Elements can be nested inside each other.</li>
+						<li>An element is always part of a block, not another element. This means that element names can't define a hierarchy such as <span>block__elem1__elem2</span>.</li>
+					</ul>
+					<span>Example</span>
+                    <pre>
+                        <code class="html">
+&lt;form class=&quot;search-form&quot;&gt;
+	&lt;input class=&quot;search-form__input&quot;&gt; 
+	&lt;button class=&quot;search-form__button&quot;&gt;Search&lt;/button&gt;
+&lt;/form&gt;
+                        </code>
+                    </pre>
+					<h3>Modifier</h3>
+					<ul>
+						<li>An entity that defines the appearance, state, or behavior of a block or element.</li>
+						<li>The modifier name is separated from the block or element name by a single underscore (_).</li>
+						<li>Used when only the presence or absence of the modifier is important, and its value is irrelevant. For example, <span>disabled</span>. If a Boolean modifier is present, its value is assumed to be <span>true</span>.</li>
+					</ul>
+					<span>Example</span>
+                    <pre>
+                        <code class="html">
+&lt;form class=&quot;search-form search-form_focused&quot;&gt;
+	&lt;input class=&quot;search-form__input&quot;&gt;
+	&lt;button class=&quot;search-form__button search-form__button_disabled&quot;&gt;Search&lt;/button&gt;
+&lt;/form&gt;
+                        </code>
+                    </pre>
                 </section>
             </section>
             <section id="component-library">

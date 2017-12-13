@@ -1,7 +1,7 @@
-$primary-color:  #0CB0D6;
-$background-color: #ECF0F1;
-$accent-color: #E74C3C;
-$font-color: #333;
+$primary-color:  #0cb0d6;
+$background-color: #ecf0f1;
+$accent-color: #e74c3c;
+$font-color: #333333;
 $font-color--inverse: $background-color;
 
 *, ul {
@@ -9,11 +9,13 @@ $font-color--inverse: $background-color;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Passion One', cursive;
+    font-family: 'Passion One', 'Franklin Gothic', 'Helvetica Neue' cursive;
+    margin: 5px 0;
 }
 
 p {
     font-size: 16px;
+    margin: 15px 0;
 }
 
 h4 {
@@ -84,8 +86,14 @@ code {
 
 #logo img {
     width: 300px;
+    height: 300px;
 }
 
 #logo-background {
     background-color: $primary-color;
+}
+
+.content ul {
+    list-style-type: disc;
+    margin: 15px 16px;
 }

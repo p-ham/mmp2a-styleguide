@@ -458,10 +458,12 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
 
 h1, h2, h3, h4 {
-  font-family: 'Passion One', cursive; }
+  font-family: 'Passion One', 'Franklin Gothic', 'Helvetica Neue' cursive;
+  margin: 5px 0; }
 
 p {
-  font-size: 16px; }
+  font-size: 16px;
+  margin: 15px 0; }
 
 h4 {
   font-size: 1.333em; }
@@ -483,7 +485,7 @@ small {
   flex-wrap: wrap; }
 
 .example {
-  border: solid 3px #333;
+  border: solid 3px #333333;
   border-radius: 5px;
   padding: 5px; }
 
@@ -492,24 +494,24 @@ code {
 
 /* colors */
 .color {
-  color: #ECF0F1;
+  color: #ecf0f1;
   font-weight: bold;
   width: 200px;
   height: 200px;
   padding: 1em; }
 
 #primary-color {
-  background-color: #0CB0D6; }
+  background-color: #0cb0d6; }
 
 #background-color {
-  background-color: #ECF0F1;
-  color: #333; }
+  background-color: #ecf0f1;
+  color: #333333; }
 
 #accent-color {
-  background-color: #E74C3C; }
+  background-color: #e74c3c; }
 
 #font-color {
-  background-color: #333; }
+  background-color: #333333; }
 
 /* fonts */
 .font {
@@ -521,7 +523,12 @@ code {
 
 /* logo */
 #logo img {
-  width: 300px; }
+  width: 300px;
+  height: 300px; }
 
 #logo-background {
-  background-color: #0CB0D6; }
+  background-color: #0cb0d6; }
+
+.content ul {
+  list-style-type: disc;
+  margin: 15px 16px; }

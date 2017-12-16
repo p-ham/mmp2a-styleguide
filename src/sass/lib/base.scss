@@ -1,8 +1,14 @@
 $primary-color:  #0cb0d6;
 $background-color: #ecf0f1;
 $accent-color: #e74c3c;
+$success-color: #80DD3E;
+$active-color: #0C87D6;
+$disabled-color: #BBBEBF;
+$font-size: 16px;
 $font-color: #333333;
 $font-color--inverse: $background-color;
+$border-width: 2px;
+$border-radius: 5px;
 
 *, ul {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
@@ -14,8 +20,12 @@ h1, h2, h3, h4 {
 }
 
 p {
-    font-size: 16px;
+    font-size: $font-size;
     margin: 15px 0;
+}
+
+a {
+	text-decoration: none;
 }
 
 h4 {
@@ -46,7 +56,8 @@ small {
 }
 
 code {
-    border-radius: 5px;
+	border-radius: 5px;
+	tab-size: 4;
 }
 
 /* colors */
@@ -93,7 +104,109 @@ code {
     background-color: $primary-color;
 }
 
-.content ul {
-    list-style-type: disc;
+.list {
     margin: 15px 16px;
+}
+
+.list-unordered {
+    list-style-type: disc;	
+}
+
+.list-ordered {
+	list-style-type: decimal;
+}
+
+	.link-external::after {
+	font-family: FontAwesome;
+	content: "\f08e";
+
+	margin: 0 5px;
+	text-decoration: none;
+}
+
+.button {
+	font-size: $font-size;
+	font-weight: bold;
+
+	padding: 10px 15px;
+
+	border-style: solid;
+	border-width: $border-width;
+	border-color: $primary-color;
+	border-radius: $border-radius;
+
+	transition: color .25s, background-color .25s;
+}
+
+.button-default {
+	color: $primary-color;	
+	background-color: $background-color;
+}
+
+.button-default:hover {
+	color: $background-color;
+	background-color: $primary-color;
+}
+
+.button-large {
+	font-size: 20px;
+
+	padding: 15px 20px;
+}
+
+.button-small {
+	font-size: 12px;
+
+	padding: 5px 10px;
+}
+
+.button-success {
+	color: $success-color;
+	border-color: $success-color;
+}
+
+.button-success:hover {
+	color: $background-color;
+	background-color: $success-color;
+}
+
+.button-error {
+	color: $accent-color;
+	border-color: $accent-color;
+}
+
+.button-error:hover {
+	color: $background-color;
+	background-color: $accent-color;
+}
+
+.button-inverse {
+	color: $background-color;
+	background-color: $primary-color;
+}
+
+.button-inverse:hover {
+	color: $primary-color;	
+	background-color: $background-color;
+}
+
+.button--active,
+.button--active:hover {
+	color: $background-color;
+	background-color: $active-color;
+	border-color: $active-color;
+}
+
+.button--disabled,
+.button--disabled:hover {
+	color: $disabled-color;
+	background-color: $background-color;
+	border-color: $disabled-color;
+
+	cursor: not-allowed;
+}
+
+.component-container {
+	display: flex;
+	flex-direction: row;
 }

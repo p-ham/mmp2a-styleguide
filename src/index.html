@@ -5,7 +5,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/monokai-sublime.css">
-        <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+		<script src="https://use.fontawesome.com/a3ca51ddea.js"></script>
         <script src="highlight.pack.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
         <link href="style.css" rel="stylesheet">
@@ -175,9 +176,9 @@ small {
                     <pre>
                         <code class="html">
 &lt;ul&gt;
-	&lt;li&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;/li&gt;
+	&lt;li&gt;...&lt;/li&gt;
+	&lt;li&gt;...&lt;/li&gt;
+	&lt;li&gt;...&lt;/li&gt;
 &lt;/ul&gt;
                         </code>
                     </pre>
@@ -445,16 +446,286 @@ gulp.task('sass:watch', function () {
             <section id="component-library">
                 <h1>Component-library</h1>
                 <section class="node" id="headings">
-                    <h2>Headings</h2>
+					<h2>Headings</h2>
+					<div class="component-container">
+						<div>
+							<pre>
+								<code class="html">
+&lt;h1 class=&quot;heading&quot;&gt;Headline1&lt;/h1&gt;
+								</code>
+							</pre>
+						</div>
+						<div>
+<h1 class="heading">Headline1</h1>
+						</div>
+					</div>
+					<div class="component-container">
+						<div>
+							<pre>
+								<code class="html">
+&lt;h2 class=&quot;heading&quot;&gt;Headline2&lt;/h1&gt;
+								</code>
+							</pre>
+						</div>
+						<div>
+<h2 class="heading">Headline1</h2>
+						</div>
+					</div>
+					<div class="component-container">
+						<div>
+							<pre>
+								<code class="html">
+&lt;h3 class=&quot;heading&quot;&gt;Headline3&lt;/h1&gt;
+								</code>
+							</pre>
+						</div>
+						<div>
+<h3 class="heading">Headline1</h3>
+						</div>
+					</div>
+					<div class="component-container">
+						<div>
+							<pre>
+								<code class="html">
+&lt;h4 class=&quot;heading&quot;&gt;Headline4&lt;/h1&gt;
+								</code>
+							</pre>
+						</div>
+						<div>
+<h4 class="heading">Headline1</h4>
+						</div>
+					</div>
                 </section>
                 <section class="node" id="lists">
-                    <h2>Lists</h2>
+					<h2>Lists</h2>
+					<h3>Unordered Lists</h3>
+					<div class="component-container">
+						<div>
+							<pre>
+								<code class="html">
+&lt;ul class=&quot;list list-unordered&quot;&gt;
+	&lt;li class="list__item"&gt;...&lt;/li&gt;
+	&lt;li class="list__item"&gt;...&lt;/li&gt;
+	&lt;li class="list__item"&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+								</code>
+							</pre>
+						</div>
+						<div>
+<ul class="list list-unordered">
+	<li class="list__item">...</li>
+	<li class="list__item">...</li>
+	<li class="list__item">...</li>
+</ul>
+						</div>
+					</div>
+					<h3>Ordered Lists</h3>
+					<div class="component-container">
+							<div>
+								<pre>
+									<code class="html">
+&lt;ol class=&quot;list list-ordered&quot;&gt;
+	&lt;li class="list__item"&gt;...&lt;/li&gt;
+	&lt;li class="list__item"&gt;...&lt;/li&gt;
+	&lt;li class="list__item"&gt;...&lt;/li&gt;
+&lt;/ol&gt;
+									</code>
+								</pre>
+							</div>
+							<div>
+<ol class="list list-ordered">
+	<li class="list__item">...</li>
+	<li class="list__item">...</li>
+	<li class="list__item">...</li>
+</ol>
+							</div>
+						</div>
                 </section>
                 <section class="node" id="links">
-                    <h2>Links</h2>
+					<h2>Links</h2>
+					<h3>Internal Links</h3>
+					<div class="component-container">
+						<div>
+							<pre>
+								<code class="html">
+&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Example Link&lt;/a&gt;
+								</code>
+							</pre>
+						</div>
+						<div>
+<a href="#" class="link">Example Link</a>
+						</div>
+					</div>
+					<h3>External Links</h3>
+					<div class="component-container">
+						<div>
+							<pre>
+								<code class="html">
+&lt;a href=&quot;#&quot; class=&quot;link link-external&quot; target=&quot;_blank&quot;&gt;Example Link&lt;/a&gt;
+								</code>
+							</pre>
+						</div>
+						<div>
+<a href="#" class="link link-external" target="_blank">Example Link</a>
+						</div>
+					</div>
                 </section>
                 <section class="node" id="buttons">
-                    <h2>Buttons</h2>
+					<h2>Buttons</h2>
+					<h3>Button Types</h3>		
+					<div class="component-container">
+						<div>
+							<pre>
+								<code class="html">
+&lt;button type=&quot;button&quot; class=&quot;button button-default&quot;&gt;Button&lt;/button&gt;
+								</code>
+							</pre>
+						</div>
+						<div>
+<button type="button" class="button button-default">Button</button>
+						</div>
+					</div>
+					<div class="component-container">
+						<div>
+							<pre>
+								<code class="html">
+&lt;input type=&quot;button&quot; class=&quot;button button-default&quot; value=&quot;Button&quot;&gt;
+								</code>
+							</pre>
+						</div>
+						<div>
+<input type="button" class="button button-default" value="Button">
+						</div>
+					</div>
+					<h3>Button Sizes</h3>
+					<div class="component-container">
+						<div>
+							<pre>
+								<code class="html">
+&lt;button type=&quot;button&quot; class=&quot;button button-default button-large&quot;&gt;Button&lt;/button&gt;
+&lt;input type=&quot;button&quot; class=&quot;button button-default button-large&quot; value=&quot;Button&quot;&gt;
+								</code>
+							</pre>
+						</div>
+						<div>
+<button type="button" class="button button-default button-large">Button</button>
+<input type="button" class="button button-default button-large" value="Button">
+						</div>
+					</div>
+					<div class="component-container">
+						<div>
+							<pre>
+								<code class="html">
+&lt;button type=&quot;button&quot; class=&quot;button button-default&quot;&gt;Button&lt;/button&gt;
+&lt;input type=&quot;button&quot; class=&quot;button button-default&quot; value=&quot;Button&quot;&gt;
+								</code>
+							</pre>
+						</div>
+						<div>
+<button type="button" class="button button-default">Button</button>
+<input type="button" class="button button-default" value="Button">
+						</div>
+					</div>
+					<div class="component-container">
+						<div>
+							<pre>
+								<code class="html">
+&lt;button type=&quot;button&quot; class=&quot;button button-default button-small&quot;&gt;Button&lt;/button&gt;
+&lt;input type=&quot;button&quot; class=&quot;button button-default button-small&quot; value=&quot;Button&quot;&gt;
+								</code>
+							</pre>
+						</div>
+						<div>
+<button type="button" class="button button-default button-small">Button</button>
+<input type="button" class="button button-default button-small" value="Button">
+						</div>
+					</div>
+					<h3>Button Options</h3>
+					<div class="component-container">
+						<div>
+							<pre>
+								<code class="html">
+&lt;button type=&quot;button&quot; class=&quot;button button-default&quot;&gt;Button&lt;/button&gt;
+&lt;input type=&quot;button&quot; class=&quot;button button-default&quot; value=&quot;Button&quot;&gt;
+								</code>
+							</pre>
+						</div>
+						<div>
+<button type="button" class="button button-default">Button</button>
+<input type="button" class="button button-default" value="Button">
+						</div>
+					</div>
+					<div class="component-container">
+						<div>
+							<pre>
+								<code class="html">
+&lt;button type=&quot;button&quot; class=&quot;button button-success&quot;&gt;Button&lt;/button&gt;
+&lt;input type=&quot;button&quot; class=&quot;button button-success&quot; value=&quot;Button&quot;&gt;
+								</code>
+							</pre>
+						</div>
+						<div>
+<button type="button" class="button button-success">Button</button>
+<input type="button" class="button button-success" value="Button">
+						</div>
+					</div>
+					<div class="component-container">
+						<div>
+							<pre>
+								<code class="html">
+&lt;button type=&quot;button&quot; class=&quot;button button-error&quot;&gt;Button&lt;/button&gt;
+&lt;input type=&quot;button&quot; class=&quot;button button-error&quot; value=&quot;Button&quot;&gt;
+								</code>
+							</pre>
+						</div>
+						<div>
+<button type="button" class="button button-error">Button</button>
+<input type="button" class="button button-error" value="Button">
+						</div>
+					</div>
+					<div class="component-container">
+						<div>
+							<pre>
+								<code class="html">
+&lt;button type=&quot;button&quot; class=&quot;button button-inverse&quot;&gt;Button&lt;/button&gt;
+&lt;input type=&quot;button&quot; class=&quot;button button-inverse&quot; value=&quot;Button&quot;&gt;
+								</code>
+							</pre>
+						</div>
+						<div>
+<button type="button" class="button button-inverse">Button</button>
+<input type="button" class="button button-inverse" value="Button">
+						</div>
+					</div>
+					<h3>Button Status</h3>
+					<div class="component-container">
+						<div>
+							<pre>
+								<code class="html">
+&lt;button type=&quot;button&quot; class=&quot;button button-default button--active&quot;&gt;Button&lt;/button&gt;
+&lt;input type=&quot;button&quot; class=&quot;button button-default button--active&quot; value=&quot;Button&quot;&gt;
+								</code>
+							</pre>
+						</div>
+						<div>
+<button type="button" class="button button-default button--active">Button</button>
+<input type="button" class="button button-default button--active" value="Button">
+						</div>
+					</div>
+					<div class="component-container">
+						<div>
+							<pre>
+								<code class="html">
+&lt;button type=&quot;button&quot; class=&quot;button button-default button--disabled&quot;&gt;Button&lt;/button&gt;
+&lt;input type=&quot;button&quot; class=&quot;button button-default button--disabled&quot; value=&quot;Button&quot;&gt;
+								</code>
+							</pre>
+						</div>
+						<div>
+<button type="button" class="button button-default button--disabled">Button</button>
+<input type="button" class="button button-default button--disabled" value="Button">
+						</div>
+					</div>
                 </section>
                 <section class="node" id="form-elements">
                     <h2>Form Elements</h2>

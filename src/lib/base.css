@@ -28,20 +28,23 @@ small {
   font-size: 0.75em; }
 
 .content {
-  width: calc(100vw - 350px); }
+  width: calc(100vw - 410px);
+  padding: 0 30px; }
 
 .flex-wrapper {
   display: flex;
   flex-wrap: wrap; }
 
-.example {
+.example-container {
   border: solid 3px #333333;
   border-radius: 5px;
-  padding: 5px; }
+  padding: 5px;
+  margin: 15px 0; }
 
 code {
   border-radius: 5px;
-  tab-size: 4; }
+  tab-size: 4;
+  -moz-tab-size: 4; }
 
 /* colors */
 .color {
@@ -218,5 +221,8 @@ nav a {
 nav a:hover {
   color: #0cb0d6; }
 
-ul ul {
+.list--indented {
   margin-left: 15px; }
+
+.sidebar {
+  box-shadow: 0 5px 5px #333333; }

@@ -46,7 +46,8 @@ small {
 }
 
 .content {
-	width: calc(100vw - 350px)
+	width: calc(100vw - 410px);
+	padding: 0 30px;
 }
 
 .flex-wrapper {
@@ -54,15 +55,17 @@ small {
     flex-wrap: wrap;
 }
 
-.example {
+.example-container {
     border: solid 3px $font-color;
     border-radius: 5px;
-    padding: 5px;
+	padding: 5px;
+	margin: 15px 0;
 }
 
 code {
 	border-radius: 5px;
 	tab-size: 4;
+	-moz-tab-size: 4;
 }
 
 /* colors */
@@ -292,6 +295,10 @@ nav a:hover {
 	color: $primary-color;
 }
 
-ul ul {
+.list--indented {
 	margin-left: 15px;
+}
+
+.sidebar {
+	box-shadow: 0 5px 5px $font-color;
 }

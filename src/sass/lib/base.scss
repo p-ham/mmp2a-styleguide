@@ -1,6 +1,7 @@
 $primary-color:  #0cb0d6;
 $background-color: #ecf0f1;
 $accent-color: #e74c3c;
+$error-color: $accent-color;
 $success-color: #80DD3E;
 $active-color: #0C87D6;
 $disabled-color: #BBBEBF;
@@ -15,8 +16,8 @@ $border-radius: 5px;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Passion One', 'Franklin Gothic', 'Helvetica Neue' cursive;
-    margin: 5px 0;
+    font-family: 'Passion One', 'Franklin Gothic', 'Helvetica Neue', cursive;
+    margin: 10px 0;
 }
 
 p {
@@ -42,6 +43,10 @@ h1 {
 }
 small {
     font-size: 0.75em;
+}
+
+.content {
+	width: calc(100vw - 350px)
 }
 
 .flex-wrapper {
@@ -171,13 +176,13 @@ code {
 }
 
 .button-error {
-	color: $accent-color;
-	border-color: $accent-color;
+	color: $error-color;
+	border-color: $error-color;
 }
 
 .button-error:hover {
 	color: $background-color;
-	background-color: $accent-color;
+	background-color: $error-color;
 }
 
 .button-inverse {
@@ -209,4 +214,84 @@ code {
 .component-container {
 	display: flex;
 	flex-direction: row;
+}
+
+/* form elements */
+
+.form__text-input {
+	box-sizing: border-box;
+	border-radius: 5px;
+	padding: 7.5px;
+	margin-bottom: 10px;
+}
+
+.form__text-input:focus {
+	border: 2px solid $primary-color;
+}
+
+.form__text-input--success {
+	border: 2px solid $success-color;
+}
+.form__text-input--error {
+	border: 2px solid $error-color;
+}
+.form__text-input--success:focus {
+	border-color: $success-color;
+	box-shadow: 1px 1px 1px $success-color, 
+				-1px -1px 1px $success-color,
+				1px -1px 1px $success-color,
+				-1px 1px 1px $success-color;
+}
+.form__text-input--error:focus {
+	border-color: $error-color;
+	box-shadow: 1px 1px 1px $error-color, 
+				-1px -1px 1px $error-color,
+				1px -1px 1px $error-color,
+				-1px 1px 1px $error-color;
+}
+
+.form__text-area {
+	box-sizing: border-box;
+	border-radius: 5px;
+	padding: 7.5px;
+	margin-bottom: 10px;
+}
+
+.form__text-area:focus {
+	border: 2px solid $primary-color;
+}
+
+#radio {
+	li {
+		margin-top: 5px;
+	}
+}
+
+.form__select {
+	border-radius: 5px;
+	padding: 7.5px
+}
+
+.form__select:focus {
+	border: 2px solid $primary-color;
+}
+
+.mediablock {
+	display: flex;
+}
+.mediablock__image {
+	width: 200px;
+	margin: 15px;
+}
+
+nav a{
+	color: $font-color;
+}
+
+nav a:hover {
+	color: $primary-color;
+}
+
+ul ul {
+	margin-left: 15px;
 }

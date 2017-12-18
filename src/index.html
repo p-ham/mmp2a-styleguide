@@ -729,12 +729,129 @@ gulp.task('sass:watch', function () {
                 </section>
                 <section class="node" id="form-elements">
                     <h2>Form Elements</h2>
+                    <section id="text-inputs">
+                        <h3>Text Inputs</h3>
+                        <div class="form_element">
+                            <label for="required-input" class="form__label">Required Field*:</label>
+                            <input class="form__text-input form__text-input--required" id="required-input" type="text" placeholder="This is a placeholder."></input>
+                        </div>
+                        <div class="form_element">
+                            <label for="optional-input" class="form__label">Optional Field:</label>
+                            <input class="form__text-input form__text-input--optional" id="optional-input" type="text" placeholder="This is a placeholder."></input>
+                        </div>
+                        <div class="form_element">
+                            <label for="success-input" class="form__label">Success Field:</label>
+                            <input class="form__text-input form__text-input--success" id="success-input" type="text" placeholder="This is a placeholder."></input>
+                        </div>
+                        <div class="form_element">
+                            <label for="error-input" class="form__label">Error Field:</label>
+                            <input class="form__text-input form__text-input--error" id="error-input" type="text" placeholder="This is a placeholder."></input>
+                        </div>
+                        <pre>
+                            <code class="html">
+&lt;div class=&quot;form_element&quot;&gt;
+    &lt;label for=&quot;required-input&quot; class=&quot;form__label&quot;&gt;Required Field*:&lt;/label&gt;
+    &lt;input class=&quot;form__text-input form__text-input--required&quot; id=&quot;required-input&quot; type=&quot;text&quot; placeholder=&quot;This is a placeholder.&quot;&gt;&lt;/input&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form_element&quot;&gt;
+    &lt;label for=&quot;optional-input&quot; class=&quot;form__label&quot;&gt;Optional Field:&lt;/label&gt;
+    &lt;input class=&quot;form__text-input form__text-input--optional&quot; id=&quot;optional-input&quot; type=&quot;text&quot; placeholder=&quot;This is a placeholder.&quot;&gt;&lt;/input&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form_element&quot;&gt;
+    &lt;label for=&quot;success-input&quot; class=&quot;form__label&quot;&gt;Success Field:&lt;/label&gt;
+    &lt;input class=&quot;form__text-input form__text-input--success&quot; id=&quot;success-input&quot; type=&quot;text&quot; placeholder=&quot;This is a placeholder.&quot;&gt;&lt;/input&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form_element&quot;&gt;
+    &lt;label for=&quot;error-input&quot; class=&quot;form__label&quot;&gt;Error Field:&lt;/label&gt;
+    &lt;input class=&quot;form__text-input form__text-input--error&quot; id=&quot;error-input&quot; type=&quot;text&quot; placeholder=&quot;This is a placeholder.&quot;&gt;&lt;/input&gt;
+&lt;/div&gt;
+                            </code>
+                        </pre>
+                    </section>
+                    <section id="text-area">
+                        <h3>Text Area</h3>
+                        <div class="form_element">
+                            <label for="text-area" class="form__label">Text Area:</label>
+                            <textarea class="form__text-area" id="text-area" placeholder="This is a placeholder."></textarea>
+                        </div>
+                        <pre>
+                            <code class="html">
+&lt;div class=&quot;form_element&quot;&gt;
+    &lt;label for=&quot;text-area&quot; class=&quot;form__label&quot;&gt;Text Area:&lt;/label&gt;
+    &lt;textarea class=&quot;form__text-area&quot; id=&quot;text-area&quot; placeholder=&quot;This is a placeholder.&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+                            </code>
+                        </pre>
+                    </section>
+                    <section id="radio">
+                        <h3>Radio Buttons</h3>
+                        <fieldset>
+                            <label class="form__label">Do you like git?</label>
+                            <ul>
+                                <li>
+                                    <input type="radio" id="git-star" name="like-git" class="form__checkbox--radio" value="star">
+                                    <label for="git-star">git star</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="git-ignore" name="like-git" class="form__checkbox--radio" value="ignore">
+                                    <label for="git-ignore">.gitignore</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <pre>
+                            <code class="html">
+&lt;fieldset&gt;
+    &lt;label class=&quot;form__label&quot;&gt;Do you like git?&lt;/label&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;input type=&quot;radio&quot; id=&quot;git-star&quot; name=&quot;like-git&quot; class=&quot;form__checkbox--radio&quot; value=&quot;star&quot;&gt;
+            &lt;label for=&quot;git-star&quot;&gt;git star&lt;/label&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;input type=&quot;radio&quot; id=&quot;git-ignore&quot; name=&quot;like-git&quot; class=&quot;form__checkbox--radio&quot; value=&quot;ignore&quot;&gt;
+            &lt;label for=&quot;git-ignore&quot;&gt;.gitignore&lt;/label&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/fieldset&gt;
+                            </code>
+                        </pre>
+                    </section>
+                    <section id="select">
+                        <form class="form">
+                            <label for="select" class="form__label">Select Field:
+                            <select class="form__select">
+                            <option disabled selected>Choose an Option:</option>
+                            <option value="gh">GitHub</option>
+                            <option value="gl">GitLab</option>
+                            <option value="bb">BitBucket</option>
+                            </select>
+                        </form>
+                    </section>
                 </section>
                 <section class="node" id="media-blocks">
                     <h2>Media Blocks</h2>
+                    <div class="mediablock">
+                        <img class="mediablock__image" src="./img/icon.png">
+                        <div>
+                            <h4 class="mediablock__title">Media Block Title</h4>
+                            <p class="mediablock__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
                 </section>
                 <section class="node" id="navigation">
                     <h2>Navigation</h2>
+                    <nav>
+                        <ul>
+                            <li><a href="#brand-guide">Brand Guide </a>
+                                <ul>
+                                    <li><a href="#introduction">Introduction</a></li>
+                                    <li><a href="#colors">Colors</a></li>
+                                    <li><a href="#typography">Typography</a></li>
+                                    <li><a href="#logo">Logo</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
                 </section>
             </section>
         </main>

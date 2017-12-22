@@ -445,7 +445,10 @@ gulp.task('sass:watch', function () {
                 <h1>Component-library</h1>
                 <section class="node" id="headings">
 					<h2>Headings</h2>
-					<div class="component-container example-container">
+					<div class="example-container">
+						<div>
+<h1 class="heading">Headline1</h1>
+						</div>
 						<div>
 							<pre>
 								<code class="html">
@@ -453,11 +456,11 @@ gulp.task('sass:watch', function () {
 								</code>
 							</pre>
 						</div>
-						<div>
-<h1 class="heading">Headline1</h1>
-						</div>
 					</div>
-					<div class="component-container example-container">
+					<div class="example-container">
+						<div>
+<h2 class="heading">Headline1</h2>
+						</div>
 						<div>
 							<pre>
 								<code class="html">
@@ -465,11 +468,11 @@ gulp.task('sass:watch', function () {
 								</code>
 							</pre>
 						</div>
-						<div>
-<h2 class="heading">Headline1</h2>
-						</div>
 					</div>
-					<div class="component-container example-container">
+					<div class="example-container">
+						<div>
+<h3 class="heading">Headline1</h3>
+						</div>
 						<div>
 							<pre>
 								<code class="html">
@@ -477,11 +480,11 @@ gulp.task('sass:watch', function () {
 								</code>
 							</pre>
 						</div>
-						<div>
-<h3 class="heading">Headline1</h3>
-						</div>
 					</div>
-					<div class="component-container example-container">
+					<div class="example-container">
+						<div>
+<h4 class="heading">Headline1</h4>
+						</div>
 						<div>
 							<pre>
 								<code class="html">
@@ -489,15 +492,19 @@ gulp.task('sass:watch', function () {
 								</code>
 							</pre>
 						</div>
-						<div>
-<h4 class="heading">Headline1</h4>
-						</div>
 					</div>
                 </section>
                 <section class="node" id="lists">
 					<h2>Lists</h2>
 					<h3>Unordered Lists</h3>
-					<div class="component-container example-container">
+					<div class="example-container">
+						<div>
+<ul class="list list-unordered">
+	<li class="list__item">List Item 1</li>
+	<li class="list__item">List Item 2</li>
+	<li class="list__item">List Item 3</li>
+</ul>
+						</div>
 						<div>
 							<pre>
 								<code class="html">
@@ -509,40 +516,36 @@ gulp.task('sass:watch', function () {
 								</code>
 							</pre>
 						</div>
-						<div>
-<ul class="list list-unordered">
-	<li class="list__item">List Item 1</li>
-	<li class="list__item">List Item 2</li>
-	<li class="list__item">List Item 3</li>
-</ul>
-						</div>
 					</div>
 					<h3>Ordered Lists</h3>
-					<div class="component-container example-container">
-							<div>
-								<pre>
-									<code class="html">
-&lt;ol class=&quot;list list-ordered&quot;&gt;
-	&lt;li class="list__item"&gt;List Item 1&lt;/li&gt;
-	&lt;li class="list__item"&gt;List Item 2&lt;/li&gt;
-	&lt;li class="list__item"&gt;List Item 3&lt;/li&gt;
-&lt;/ol&gt;
-									</code>
-								</pre>
-							</div>
-							<div>
+					<div class="example-container">
+						<div>
 <ol class="list list-ordered">
 	<li class="list__item">List Item 1</li>
 	<li class="list__item">List Item 2</li>
 	<li class="list__item">List Item 3</li>
 </ol>
-							</div>
 						</div>
+						<div>
+							<pre>
+								<code class="html">
+&lt;ol class=&quot;list list-ordered&quot;&gt;
+	&lt;li class="list__item"&gt;List Item 1&lt;/li&gt;
+	&lt;li class="list__item"&gt;List Item 2&lt;/li&gt;
+	&lt;li class="list__item"&gt;List Item 3&lt;/li&gt;
+&lt;/ol&gt;
+								</code>
+							</pre>
+						</div>
+					</div>
                 </section>
                 <section class="node" id="links">
 					<h2>Links</h2>
 					<h3>Internal Links</h3>
-					<div class="component-container example-container">
+					<div class="example-container">
+						<div>
+<a href="#" class="link">Example Link</a>
+						</div>
 						<div>
 							<pre>
 								<code class="html">
@@ -550,12 +553,12 @@ gulp.task('sass:watch', function () {
 								</code>
 							</pre>
 						</div>
-						<div>
-<a href="#" class="link">Example Link</a>
-						</div>
 					</div>
 					<h3>External Links</h3>
-					<div class="component-container example-container">
+					<div class="example-container">
+						<div>
+<a href="#" class="link link-external" target="_blank">Example Link</a>
+						</div>
 						<div>
 							<pre>
 								<code class="html">
@@ -563,15 +566,15 @@ gulp.task('sass:watch', function () {
 								</code>
 							</pre>
 						</div>
-						<div>
-<a href="#" class="link link-external" target="_blank">Example Link</a>
-						</div>
 					</div>
                 </section>
                 <section class="node" id="buttons">
 					<h2>Buttons</h2>
 					<h3>Button Types</h3>		
-					<div class="component-container example-container">
+					<div class="example-container">
+						<div>
+<button type="button" class="button button-default">Button</button>
+						</div>
 						<div>
 							<pre>
 								<code class="html">
@@ -579,11 +582,11 @@ gulp.task('sass:watch', function () {
 								</code>
 							</pre>
 						</div>
-						<div>
-<button type="button" class="button button-default">Button</button>
-						</div>
 					</div>
-					<div class="component-container example-container">
+					<div class="example-container">
+						<div>
+<input type="button" class="button button-default" value="Button">
+						</div>
 						<div>
 							<pre>
 								<code class="html">
@@ -591,12 +594,13 @@ gulp.task('sass:watch', function () {
 								</code>
 							</pre>
 						</div>
-						<div>
-<input type="button" class="button button-default" value="Button">
-						</div>
 					</div>
 					<h3>Button Sizes</h3>
-					<div class="component-container example-container">
+					<div class="example-container">
+						<div>
+<button type="button" class="button button-default button-large">Button</button>
+<input type="button" class="button button-default button-large" value="Button">
+						</div>
 						<div>
 							<pre>
 								<code class="html">
@@ -605,12 +609,12 @@ gulp.task('sass:watch', function () {
 								</code>
 							</pre>
 						</div>
-						<div>
-<button type="button" class="button button-default button-large">Button</button>
-<input type="button" class="button button-default button-large" value="Button">
-						</div>
 					</div>
-					<div class="component-container example-container">
+					<div class="example-container">
+						<div>
+<button type="button" class="button button-default">Button</button>
+<input type="button" class="button button-default" value="Button">
+						</div>
 						<div>
 							<pre>
 								<code class="html">
@@ -619,12 +623,12 @@ gulp.task('sass:watch', function () {
 								</code>
 							</pre>
 						</div>
-						<div>
-<button type="button" class="button button-default">Button</button>
-<input type="button" class="button button-default" value="Button">
-						</div>
 					</div>
-					<div class="component-container example-container">
+					<div class="example-container">
+						<div>
+<button type="button" class="button button-default button-small">Button</button>
+<input type="button" class="button button-default button-small" value="Button">
+						</div>
 						<div>
 							<pre>
 								<code class="html">
@@ -633,13 +637,13 @@ gulp.task('sass:watch', function () {
 								</code>
 							</pre>
 						</div>
-						<div>
-<button type="button" class="button button-default button-small">Button</button>
-<input type="button" class="button button-default button-small" value="Button">
-						</div>
 					</div>
 					<h3>Button Options</h3>
-					<div class="component-container example-container">
+					<div class="example-container">
+						<div>
+<button type="button" class="button button-default">Button</button>
+<input type="button" class="button button-default" value="Button">
+						</div>
 						<div>
 							<pre>
 								<code class="html">
@@ -648,12 +652,12 @@ gulp.task('sass:watch', function () {
 								</code>
 							</pre>
 						</div>
-						<div>
-<button type="button" class="button button-default">Button</button>
-<input type="button" class="button button-default" value="Button">
-						</div>
 					</div>
-					<div class="component-container example-container">
+					<div class="example-container">
+						<div>
+<button type="button" class="button button-success">Button</button>
+<input type="button" class="button button-success" value="Button">
+						</div>
 						<div>
 							<pre>
 								<code class="html">
@@ -662,12 +666,12 @@ gulp.task('sass:watch', function () {
 								</code>
 							</pre>
 						</div>
-						<div>
-<button type="button" class="button button-success">Button</button>
-<input type="button" class="button button-success" value="Button">
-						</div>
 					</div>
-					<div class="component-container example-container">
+					<div class="example-container">
+						<div>
+<button type="button" class="button button-error">Button</button>
+<input type="button" class="button button-error" value="Button">
+						</div>
 						<div>
 							<pre>
 								<code class="html">
@@ -676,12 +680,12 @@ gulp.task('sass:watch', function () {
 								</code>
 							</pre>
 						</div>
-						<div>
-<button type="button" class="button button-error">Button</button>
-<input type="button" class="button button-error" value="Button">
-						</div>
 					</div>
-					<div class="component-container example-container">
+					<div class="example-container">
+						<div>
+<button type="button" class="button button-inverse">Button</button>
+<input type="button" class="button button-inverse" value="Button">
+						</div>
 						<div>
 							<pre>
 								<code class="html">
@@ -690,13 +694,13 @@ gulp.task('sass:watch', function () {
 								</code>
 							</pre>
 						</div>
-						<div>
-<button type="button" class="button button-inverse">Button</button>
-<input type="button" class="button button-inverse" value="Button">
-						</div>
 					</div>
 					<h3>Button Status</h3>
-					<div class="component-container example-container">
+					<div class="example-container">
+						<div>
+<button type="button" class="button button-default button--active">Button</button>
+<input type="button" class="button button-default button--active" value="Button">
+						</div>
 						<div>
 							<pre>
 								<code class="html">
@@ -705,12 +709,12 @@ gulp.task('sass:watch', function () {
 								</code>
 							</pre>
 						</div>
-						<div>
-<button type="button" class="button button-default button--active">Button</button>
-<input type="button" class="button button-default button--active" value="Button">
-						</div>
 					</div>
-					<div class="component-container example-container">
+					<div class="example-container">
+						<div>
+<button type="button" class="button button-default button--disabled">Button</button>
+<input type="button" class="button button-default button--disabled" value="Button">
+						</div>
 						<div>
 							<pre>
 								<code class="html">
@@ -718,10 +722,6 @@ gulp.task('sass:watch', function () {
 &lt;input type=&quot;button&quot; class=&quot;button button-default button--disabled&quot; value=&quot;Button&quot;&gt;
 								</code>
 							</pre>
-						</div>
-						<div>
-<button type="button" class="button button-default button--disabled">Button</button>
-<input type="button" class="button button-default button--disabled" value="Button">
 						</div>
 					</div>
                 </section>

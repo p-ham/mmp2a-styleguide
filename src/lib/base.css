@@ -108,6 +108,9 @@ code {
   border-radius: 5px;
   transition: color .25s, background-color .25s; }
 
+.button:hover {
+  cursor: pointer; }
+
 .button-default {
   color: #0cb0d6;
   background-color: #ecf0f1; }

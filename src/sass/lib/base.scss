@@ -146,6 +146,10 @@ code {
 	transition: color .25s, background-color .25s;
 }
 
+.button:hover {
+	cursor: pointer;
+}
+
 .button-default {
 	color: $primary-color;	
 	background-color: $background-color;

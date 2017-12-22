@@ -16,9 +16,9 @@
             <img src="img/icon.png">
             <h4>Styleguide</h4>
             <nav>
-                <ul>
+                <ul class="list">
                     <li><a href="#brand-guide">Brand Guide </a>
-                        <ul>
+                        <ul class="list--indented">
                             <li><a href="#introduction">Introduction</a></li>
                             <li><a href="#colors">Colors</a></li>
                             <li><a href="#typography">Typography</a></li>
@@ -26,7 +26,7 @@
                         </ul>
                     </li>
                     <li><a href="#css-methodology">CSS-Methodology</a>
-                        <ul>
+                        <ul class="list--indented">
                             <li><a href="#indentation">Indentation</a></li>
                             <li><a href="#units">Units</a></li>
                             <li><a href="#file-structure">File Structure</a></li>
@@ -35,7 +35,7 @@
                         </ul>
                     </li>
                     <li><a href="#component-library">Component Library</a>
-                        <ul>
+                        <ul class="list--indented">
                             <li><a href="#headings">Headings</a></li>
                             <li><a href="#lists">Lists</a></li>
                             <li><a href="#links">Links</a></li>
@@ -57,10 +57,8 @@
                 </section>
                 <section class="node" id="colors">
                     <h2>Colors</h2>
-                    <p>The primary brand colors are used to represent Dabilu Sports in public and must reflect the Dabilu Sports brand. These colors are part of our corporate identity.</p>
                     <div class="node__element">
                         <h3>Primary Colors</h3>
-                        <p>asdfasdfasfdasfd</p>
                         <div class="flex-wrapper">
                             <div class="color" id="primary-color">
                                 <p>$primary-color</p>
@@ -93,7 +91,7 @@
                     <h2>Typography</h2>
                     <h3>Typefaces</h3>
                     <p>Since both GitHub and GitLab use <b>Segoe UI</b> as their main font, we opted to use it as our main font too. To highlight headlines a bit more, we use <b>Passion One</b> as our font for headlines. We use Roboto as a fallback font in case the user doesn't have Segoe UI installed on their device. As a fallback for headlines we use any cursive font.</p>
-                    <section id="typeface" class="example">
+                    <section id="typeface" class="example-container">
                         <div class="font flex-wrapper">
                             <div>
                                 <h4>Segoe UI</h4>
@@ -121,7 +119,7 @@
                     </section>
                     <h3>Font Sizes</h3>
                     <p>16px is assumed to be the default font size. A scale of 1.333 (Perfect Fourth) is used for each of the four levels of headings. Small text is smaller than the default font size by the same factor.</p>
-                    <section id="font-size" class="example">
+                    <section id="font-size" class="example-container">
                         <h1>This is a heading of the level h1 - 3.157em (50.15px)</h1>
                         <h2>This is a heading of the level h2 - 2.369em (37.90px)</h2>
                         <h3>This is a heading of the level h3 - 1.777em (28.43px)</h3>
@@ -193,13 +191,13 @@ small {
                 <section class="node" id="units">
                     <h2>Units</h2>
                     <span>Prefer these units</span>
-                    <ul>
+                    <ul class="list list-unordered">
                         <li>%</li>
                         <li>em</li>
                         <li>px</li>                        
                     </ul>
                     <span>Avoid these units</span>
-                    <ul>
+                    <ul class="list list-unordered">
                         <li>in</li>
                         <li>cm</li>
                         <li>mm</li>                        
@@ -447,7 +445,7 @@ gulp.task('sass:watch', function () {
                 <h1>Component-library</h1>
                 <section class="node" id="headings">
 					<h2>Headings</h2>
-					<div class="component-container">
+					<div class="component-container example-container">
 						<div>
 							<pre>
 								<code class="html">
@@ -459,7 +457,7 @@ gulp.task('sass:watch', function () {
 <h1 class="heading">Headline1</h1>
 						</div>
 					</div>
-					<div class="component-container">
+					<div class="component-container example-container">
 						<div>
 							<pre>
 								<code class="html">
@@ -471,7 +469,7 @@ gulp.task('sass:watch', function () {
 <h2 class="heading">Headline1</h2>
 						</div>
 					</div>
-					<div class="component-container">
+					<div class="component-container example-container">
 						<div>
 							<pre>
 								<code class="html">
@@ -483,7 +481,7 @@ gulp.task('sass:watch', function () {
 <h3 class="heading">Headline1</h3>
 						</div>
 					</div>
-					<div class="component-container">
+					<div class="component-container example-container">
 						<div>
 							<pre>
 								<code class="html">
@@ -499,7 +497,7 @@ gulp.task('sass:watch', function () {
                 <section class="node" id="lists">
 					<h2>Lists</h2>
 					<h3>Unordered Lists</h3>
-					<div class="component-container">
+					<div class="component-container example-container">
 						<div>
 							<pre>
 								<code class="html">
@@ -520,7 +518,7 @@ gulp.task('sass:watch', function () {
 						</div>
 					</div>
 					<h3>Ordered Lists</h3>
-					<div class="component-container">
+					<div class="component-container example-container">
 							<div>
 								<pre>
 									<code class="html">
@@ -544,7 +542,7 @@ gulp.task('sass:watch', function () {
                 <section class="node" id="links">
 					<h2>Links</h2>
 					<h3>Internal Links</h3>
-					<div class="component-container">
+					<div class="component-container example-container">
 						<div>
 							<pre>
 								<code class="html">
@@ -557,7 +555,7 @@ gulp.task('sass:watch', function () {
 						</div>
 					</div>
 					<h3>External Links</h3>
-					<div class="component-container">
+					<div class="component-container example-container">
 						<div>
 							<pre>
 								<code class="html">
@@ -573,7 +571,7 @@ gulp.task('sass:watch', function () {
                 <section class="node" id="buttons">
 					<h2>Buttons</h2>
 					<h3>Button Types</h3>		
-					<div class="component-container">
+					<div class="component-container example-container">
 						<div>
 							<pre>
 								<code class="html">
@@ -585,7 +583,7 @@ gulp.task('sass:watch', function () {
 <button type="button" class="button button-default">Button</button>
 						</div>
 					</div>
-					<div class="component-container">
+					<div class="component-container example-container">
 						<div>
 							<pre>
 								<code class="html">
@@ -598,7 +596,7 @@ gulp.task('sass:watch', function () {
 						</div>
 					</div>
 					<h3>Button Sizes</h3>
-					<div class="component-container">
+					<div class="component-container example-container">
 						<div>
 							<pre>
 								<code class="html">
@@ -612,7 +610,7 @@ gulp.task('sass:watch', function () {
 <input type="button" class="button button-default button-large" value="Button">
 						</div>
 					</div>
-					<div class="component-container">
+					<div class="component-container example-container">
 						<div>
 							<pre>
 								<code class="html">
@@ -626,7 +624,7 @@ gulp.task('sass:watch', function () {
 <input type="button" class="button button-default" value="Button">
 						</div>
 					</div>
-					<div class="component-container">
+					<div class="component-container example-container">
 						<div>
 							<pre>
 								<code class="html">
@@ -641,7 +639,7 @@ gulp.task('sass:watch', function () {
 						</div>
 					</div>
 					<h3>Button Options</h3>
-					<div class="component-container">
+					<div class="component-container example-container">
 						<div>
 							<pre>
 								<code class="html">
@@ -655,7 +653,7 @@ gulp.task('sass:watch', function () {
 <input type="button" class="button button-default" value="Button">
 						</div>
 					</div>
-					<div class="component-container">
+					<div class="component-container example-container">
 						<div>
 							<pre>
 								<code class="html">
@@ -669,7 +667,7 @@ gulp.task('sass:watch', function () {
 <input type="button" class="button button-success" value="Button">
 						</div>
 					</div>
-					<div class="component-container">
+					<div class="component-container example-container">
 						<div>
 							<pre>
 								<code class="html">
@@ -683,7 +681,7 @@ gulp.task('sass:watch', function () {
 <input type="button" class="button button-error" value="Button">
 						</div>
 					</div>
-					<div class="component-container">
+					<div class="component-container example-container">
 						<div>
 							<pre>
 								<code class="html">
@@ -698,7 +696,7 @@ gulp.task('sass:watch', function () {
 						</div>
 					</div>
 					<h3>Button Status</h3>
-					<div class="component-container">
+					<div class="component-container example-container">
 						<div>
 							<pre>
 								<code class="html">
@@ -712,7 +710,7 @@ gulp.task('sass:watch', function () {
 <input type="button" class="button button-default button--active" value="Button">
 						</div>
 					</div>
-					<div class="component-container">
+					<div class="component-container example-container">
 						<div>
 							<pre>
 								<code class="html">
@@ -731,75 +729,98 @@ gulp.task('sass:watch', function () {
                     <h2>Form Elements</h2>
                     <section id="text-inputs">
                         <h3>Text Inputs</h3>
-                        <div class="form_element">
-                            <label for="required-input" class="form__label">Required Field*:</label>
-                            <input class="form__text-input form__text-input--required" id="required-input" type="text" placeholder="This is a placeholder."></input>
-                        </div>
-                        <div class="form_element">
-                            <label for="optional-input" class="form__label">Optional Field:</label>
-                            <input class="form__text-input form__text-input--optional" id="optional-input" type="text" placeholder="This is a placeholder."></input>
-                        </div>
-                        <div class="form_element">
-                            <label for="success-input" class="form__label">Success Field:</label>
-                            <input class="form__text-input form__text-input--success" id="success-input" type="text" placeholder="This is a placeholder."></input>
-                        </div>
-                        <div class="form_element">
-                            <label for="error-input" class="form__label">Error Field:</label>
-                            <input class="form__text-input form__text-input--error" id="error-input" type="text" placeholder="This is a placeholder."></input>
-                        </div>
-                        <pre>
-                            <code class="html">
+                        <div class="example-container">
+                            <div class="form_element">
+                                <label for="required-input" class="form__label">Required Field*:</label>
+                                <input class="form__text-input form__text-input--required" id="required-input" type="text" placeholder="This is a placeholder."></input>
+                            </div>
+                            <pre>
+                                <code class="html">
 &lt;div class=&quot;form_element&quot;&gt;
     &lt;label for=&quot;required-input&quot; class=&quot;form__label&quot;&gt;Required Field*:&lt;/label&gt;
     &lt;input class=&quot;form__text-input form__text-input--required&quot; id=&quot;required-input&quot; type=&quot;text&quot; placeholder=&quot;This is a placeholder.&quot;&gt;&lt;/input&gt;
 &lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                        <div class="example-container">
+                            <div class="form_element">
+                                <label for="optional-input" class="form__label">Optional Field:</label>
+                                <input class="form__text-input form__text-input--optional" id="optional-input" type="text" placeholder="This is a placeholder."></input>
+                            </div>
+                            <pre>
+                                <code class="html">
 &lt;div class=&quot;form_element&quot;&gt;
     &lt;label for=&quot;optional-input&quot; class=&quot;form__label&quot;&gt;Optional Field:&lt;/label&gt;
     &lt;input class=&quot;form__text-input form__text-input--optional&quot; id=&quot;optional-input&quot; type=&quot;text&quot; placeholder=&quot;This is a placeholder.&quot;&gt;&lt;/input&gt;
 &lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                        <div class="example-container">
+                            <div class="form_element">
+                                <label for="success-input" class="form__label">Success Field:</label>
+                                <input class="form__text-input form__text-input--success" id="success-input" type="text" placeholder="This is a placeholder."></input>
+                            </div>
+                            <pre>
+                                <code class="html">
 &lt;div class=&quot;form_element&quot;&gt;
     &lt;label for=&quot;success-input&quot; class=&quot;form__label&quot;&gt;Success Field:&lt;/label&gt;
     &lt;input class=&quot;form__text-input form__text-input--success&quot; id=&quot;success-input&quot; type=&quot;text&quot; placeholder=&quot;This is a placeholder.&quot;&gt;&lt;/input&gt;
 &lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                        <div class="example-container">
+                            <div class="form_element">
+                                <label for="error-input" class="form__label">Error Field:</label>
+                                <input class="form__text-input form__text-input--error" id="error-input" type="text" placeholder="This is a placeholder."></input>
+                            </div>
+                            <pre>
+                                <code class="html">
 &lt;div class=&quot;form_element&quot;&gt;
     &lt;label for=&quot;error-input&quot; class=&quot;form__label&quot;&gt;Error Field:&lt;/label&gt;
     &lt;input class=&quot;form__text-input form__text-input--error&quot; id=&quot;error-input&quot; type=&quot;text&quot; placeholder=&quot;This is a placeholder.&quot;&gt;&lt;/input&gt;
 &lt;/div&gt;
-                            </code>
-                        </pre>
+                                </code>
+                            </pre>
+                        </div>
                     </section>
                     <section id="text-area">
                         <h3>Text Area</h3>
-                        <div class="form_element">
-                            <label for="text-area" class="form__label">Text Area:</label>
-                            <textarea class="form__text-area" id="text-area" placeholder="This is a placeholder."></textarea>
-                        </div>
-                        <pre>
-                            <code class="html">
+                        <div class="example-container">
+                            <div class="form_element">
+                                <label for="text-area" class="form__label">Text Area:</label>
+                                <textarea class="form__text-area" id="text-area" placeholder="This is a placeholder."></textarea>
+                            </div>
+                            <pre>
+                                <code class="html">
 &lt;div class=&quot;form_element&quot;&gt;
     &lt;label for=&quot;text-area&quot; class=&quot;form__label&quot;&gt;Text Area:&lt;/label&gt;
     &lt;textarea class=&quot;form__text-area&quot; id=&quot;text-area&quot; placeholder=&quot;This is a placeholder.&quot;&gt;&lt;/textarea&gt;
 &lt;/div&gt;
-                            </code>
-                        </pre>
+                                </code>
+                            </pre>
+                        </div>
                     </section>
                     <section id="radio">
                         <h3>Radio Buttons</h3>
-                        <fieldset>
-                            <label class="form__label">Do you like git?</label>
-                            <ul>
-                                <li>
-                                    <input type="radio" id="git-star" name="like-git" class="form__checkbox--radio" value="star">
-                                    <label for="git-star">git star</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="git-ignore" name="like-git" class="form__checkbox--radio" value="ignore">
-                                    <label for="git-ignore">.gitignore</label>
-                                </li>
-                            </ul>
-                        </fieldset>
-                        <pre>
-                            <code class="html">
+                        <div class="example-container">
+                            <fieldset>
+                                <label class="form__label">Do you like git?</label>
+                                <ul>
+                                    <li>
+                                        <input type="radio" id="git-star" name="like-git" class="form__checkbox--radio" value="star">
+                                        <label for="git-star">git star</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="git-ignore" name="like-git" class="form__checkbox--radio" value="ignore">
+                                        <label for="git-ignore">.gitignore</label>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                            <pre>
+                                <code class="html">
 &lt;fieldset&gt;
     &lt;label class=&quot;form__label&quot;&gt;Do you like git?&lt;/label&gt;
     &lt;ul&gt;
@@ -813,45 +834,92 @@ gulp.task('sass:watch', function () {
         &lt;/li&gt;
     &lt;/ul&gt;
 &lt;/fieldset&gt;
-                            </code>
-                        </pre>
+                                </code>
+                            </pre>
+                        </div>
                     </section>
                     <section id="select">
-                        <form class="form">
-                            <label for="select" class="form__label">Select Field:
-                            <select class="form__select">
-                            <option disabled selected>Choose an Option:</option>
-                            <option value="gh">GitHub</option>
-                            <option value="gl">GitLab</option>
-                            <option value="bb">BitBucket</option>
-                            </select>
-                        </form>
+                        <div class="example-container">
+                            <form class="form">
+                                <label for="select" class="form__label">Select Field:
+                                <select class="form__select">
+                                <option disabled selected>Choose an Option:</option>
+                                <option value="gh">GitHub</option>
+                                <option value="gl">GitLab</option>
+                                <option value="bb">BitBucket</option>
+                                </select>
+                            </form>
+                            <pre>
+                                <code class="html">
+&lt;form class=&quot;form&quot;&gt;
+    &lt;label for=&quot;select&quot; class=&quot;form__label&quot;&gt;Select Field:
+    &lt;select class=&quot;form__select&quot;&gt;
+    &lt;option disabled selected&gt;Choose an Option:&lt;/option&gt;
+    &lt;option value=&quot;gh&quot;&gt;GitHub&lt;/option&gt;
+    &lt;option value=&quot;gl&quot;&gt;GitLab&lt;/option&gt;
+    &lt;option value=&quot;bb&quot;&gt;BitBucket&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/form&gt;
+                                </code>
+                            </pre>
+                        </div>
                     </section>
                 </section>
                 <section class="node" id="media-blocks">
                     <h2>Media Blocks</h2>
-                    <div class="mediablock">
-                        <img class="mediablock__image" src="./img/icon.png">
-                        <div>
-                            <h4 class="mediablock__title">Media Block Title</h4>
-                            <p class="mediablock__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    <div class="example-container">
+                        <div class="mediablock">
+                            <img class="mediablock__image" src="./img/icon.png">
+                            <div>
+                                <h4 class="mediablock__title">Media Block Title</h4>
+                                <p class="mediablock__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                            </div>
                         </div>
+                        <pre>
+                            <code class="html">
+&lt;div class=&quot;mediablock&quot;&gt;
+    &lt;img class=&quot;mediablock__image&quot; src=&quot;./img/icon.png&quot;&gt;
+    &lt;div&gt;
+        &lt;h4 class=&quot;mediablock__title&quot;&gt;Media Block Title&lt;/h4&gt;
+        &lt;p class=&quot;mediablock__text&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                            </code>
+                        </pre>
                     </div>
                 </section>
                 <section class="node" id="navigation">
                     <h2>Navigation</h2>
-                    <nav>
-                        <ul>
-                            <li><a href="#brand-guide">Brand Guide </a>
-                                <ul>
-                                    <li><a href="#introduction">Introduction</a></li>
-                                    <li><a href="#colors">Colors</a></li>
-                                    <li><a href="#typography">Typography</a></li>
-                                    <li><a href="#logo">Logo</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
+                    <div class="example-container">
+                        <nav>
+                            <ul class="list">
+                                <li><a href="#brand-guide">Brand Guide </a>
+                                    <ul class="list--indented">
+                                        <li><a href="#introduction">Introduction</a></li>
+                                        <li><a href="#colors">Colors</a></li>
+                                        <li><a href="#typography">Typography</a></li>
+                                        <li><a href="#logo">Logo</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        <pre>
+                            <code class="html">
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#brand-guide&quot;&gt;Brand Guide &lt;/a&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=&quot;#introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#colors&quot;&gt;Colors&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#typography&quot;&gt;Typography&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#logo&quot;&gt;Logo&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+                            </code>
+                        </pre>
+                    </div>
                 </section>
             </section>
         </main>
